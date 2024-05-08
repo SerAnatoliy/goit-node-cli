@@ -14,7 +14,7 @@ const options = program.opts();
 
 
 // TODO: рефакторити
-async function invokeAction({ action, id, name, email, phone }) {
+async function invokeAction({ action, id, ...data }) {
   switch (action) {
     case "list":
       const contactsList = await listContacts();
